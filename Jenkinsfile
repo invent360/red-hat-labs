@@ -3,7 +3,7 @@ node("maven") {
             sh "mvn -B -Popenshift package"
           }
 node("jenkins-slave-ansible") {
-            sh "ansible version"
+            sh "ansible --version"
           }
 node("jenkins-slave-ansible") {
             sh "python version"
