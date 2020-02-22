@@ -13,11 +13,13 @@ pipeline {
             }
         }
         stage('Build') {
-            container('maven') {
-                stage('Build a Maven project') {
-                    echo 'Run coverage and CLEAN UP Before please'
-                }
-            }
+          steps {
+              container('maven') {
+                  stage('Build a Maven project') {
+                      echo 'Run coverage and CLEAN UP Before please'
+                  }
+              }
+          }
         }
     } 
 }
