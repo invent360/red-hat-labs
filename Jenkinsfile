@@ -1,6 +1,4 @@
 #! groovy
-timestamps {
-  node('taas_image') {
     ansiColor('xterm') {
 
       stage('Checkout source code') { 
@@ -38,6 +36,4 @@ timestamps {
         }
       }
 
-    }
-  }
 }
