@@ -14,7 +14,7 @@ pipeline {
         }
 
         stage('Get a Maven project') {
-            container('nodejs') {
+            node('nodejs') {
                 stage('Build a Maven project') {
                     echo 'Run coverage and CLEAN UP Before please'
                 }
