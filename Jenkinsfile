@@ -6,7 +6,7 @@ pipeline {
     stages {
       stage('preamble') {
           steps {
-
+            sh "git clone https://github.com/openshift/openshift-jee-sample.git ."
           }
       }
   }
