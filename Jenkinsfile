@@ -1,5 +1,5 @@
 #! groovy
-    ansiColor('xterm') {
+    pipeline {
 
       stage('Checkout source code') { 
         sh "git clone https://github.com/openshift/openshift-jee-sample.git ."
