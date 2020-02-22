@@ -1,9 +1,15 @@
 #! groovy
-  node('jenkins-slave-golang') {
-      stage('Checkout source code') { 
-        sh "go version"
-      }
-      stage('Create cluster') {
-        sh "go version"
-      }
+ pipeline {
+    agent none
+    node('jenkins-slave-python') {
+        stage('Create cluster') {
+          sh "python --version"
+        }
+    }
+
+    node('jenkins-slave-golang') {
+        stage('Create cluster') {
+          sh "go version"
+        }
+    }
   }
