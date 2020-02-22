@@ -1,3 +1,4 @@
+#!groovy
 pipeline {
     agent any
     options {
@@ -20,5 +21,30 @@ pipeline {
               }
             }
       }
+
+      stage('Build with Python') {
+            steps {
+              node("jenkins-slave-python") {
+                sh "python --version"
+              }
+            }
+      }
+
+      stage('Build with Golang') {
+            steps {
+              node("jenkins-slave-golang") {
+                sh "go version"
+              }
+            }
+      }
+
+      stage('Build with Ansible') {
+            steps {
+              node("jenkins-slave-ansible") {
+                sh "ansible --version"
+              }
+            }
+      }
+
   }
 }
