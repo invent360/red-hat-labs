@@ -9,9 +9,8 @@
     //       sh "python --version"
     //     }
     // }
-
+stage('Create cluster') {
     node('jenkins-slave-golang') {
-        stage('Create cluster') {
           sh "go version"
         }
     }
