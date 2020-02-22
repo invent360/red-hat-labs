@@ -1,12 +1,13 @@
 pipeline {
-  agent none
-  options {
-    timeout(time: 20, unit: 'MINUTES') 
-  }
-  stages {
-    stage('preamble') {
-        steps {
-
-        }
+    agent none
+    options {
+      timeout(time: 20, unit: 'MINUTES') 
     }
+    stages {
+      stage('preamble') {
+          steps {
+
+          }
+      }
+  }
 }
