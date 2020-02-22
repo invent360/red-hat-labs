@@ -12,14 +12,23 @@ pipeline {
                 echo 'Checkout Repo'
             }
         }
-        stage('Build') {
-          steps {
-              container('maven') {
-                  stage('Build a Maven project') {
-                      echo 'Run coverage and CLEAN UP Before please'
-                  }
-              }
-          }
+
+        stage('Get a Maven project') {
+            container('nodejs') {
+                stage('Build a Maven project') {
+                    echo 'Run coverage and CLEAN UP Before please'
+                }
+            }
         }
+
+        // stage('Build') {
+        //   steps {
+        //       container('maven') {
+        //           stage('Build a Maven project') {
+        //               echo 'Run coverage and CLEAN UP Before please'
+        //           }
+        //       }
+        //   }
+        // }
     } 
 }
