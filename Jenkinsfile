@@ -1,7 +1,11 @@
 #!groovy
 
 pipeline {
-
+    agent {
+      node {
+        label 'nodejs' 
+      }
+    }
     stages {
         stage('Checkout') {
             steps {
