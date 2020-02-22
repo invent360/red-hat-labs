@@ -9,7 +9,7 @@ node("jenkins-slave-python") {
             sh "python --version"
           }
  node("jenkins-slave-golang") {
-            sh "go --version"
+            sh "go version"
           }
 node("jenkins-slave-gradle") {
             sh "gradle --version"
