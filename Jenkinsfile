@@ -1,18 +1,12 @@
-#! groovy
- pipeline {
-    agent none
+pipeline {
+  agent none
+  options {
+    timeout(time: 20, unit: 'MINUTES') 
+  }
+  stages {
+    stage('preamble') {
+        steps {
 
-    stages {
-
-    // node('jenkins-slave-python') {
-    //     stage('Create cluster') {
-    //       sh "python --version"
-    //     }
-    // }
-stage('Create cluster') {
-    node('jenkins-slave-golang') {
-          sh "go version"
         }
     }
-  }
-   }
+}
